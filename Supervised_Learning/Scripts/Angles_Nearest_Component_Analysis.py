@@ -5,7 +5,7 @@ import os
 
 
 def NCA():
-    root_dir = os.path.join(os.path.expanduser('~'), 'PycharmProjects', 'Tennis_AI', 'Tennis_AI_Complete')
+    root_dir = "."
 
     with open(os.path.join(root_dir, "Supervised_Learning", "Angle_Data.json"), "r") as file:
         angles = json.load(file)

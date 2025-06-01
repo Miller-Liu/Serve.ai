@@ -16,7 +16,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 DESIRED_HEIGHT = 400
 DESIRED_WIDTH = 500
-root_dir = "ENTER YOUR PATH HERE"
+root_dir = "."
 current_dir = os.path.join(root_dir, 'Supervised_Learning')
 
 
@@ -318,8 +318,8 @@ def synchronize_videos(vid1, vid2, predictions1, predictions2, labels1, labels2,
     final_video_2 = concatenate_videoclips(video_2_subclips)
     path1 = Path(vid1).stem
     path2 = Path(vid2).stem
-    final_video_1.write_videofile(os.path.join(root_dir, "Static", "Videos", f"{path1}.mp4"))
-    final_video_2.write_videofile(os.path.join(root_dir, "Static", "Videos", f"{path2}.mp4"))
+    final_video_1.write_videofile(os.path.join(root_dir, "Static", "videos", f"{path1}.mp4"))
+    final_video_2.write_videofile(os.path.join(root_dir, "Static", "videos", f"{path2}.mp4"))
     return path1 + ".mp4", path2 + ".mp4"
 
 
@@ -345,11 +345,11 @@ def remove_all_files():
 
 
 def supervised_learning(path1, path2, choice):
-    path1 = os.path.join(root_dir, "Static", "uploads", path1)
-    path2 = os.path.join(root_dir, "Static", "uploads", path2)
     main(path1, path2, choice)
 
 
-def execute():
-    supervised_learning("video1.mp4", "video2.mp4", "NNC")
+def execute(path1, path2):
+    path1 = os.path.join(root_dir, "Static", "uploads", path1)
+    path2 = os.path.join(root_dir, "Static", "uploads", path2)
+    supervised_learning(path1, path2, "NNC")
     remove_all_files()

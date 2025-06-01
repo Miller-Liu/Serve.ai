@@ -16,8 +16,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 DESIRED_HEIGHT = 400
 DESIRED_WIDTH = 500
-root_dir = os.path.join(os.path.expanduser('~'), 'Projects', 'Trial')
-
+root_dir = "."
 
 # Configure K-means model
 def K_means(angles_frames):
@@ -338,8 +337,8 @@ def Play_Video(vid1, vid2, frame_array):
     final_video_2 = concatenate_videoclips(video_2_subclips[1:])
     path1 = Path(vid1).stem
     path2 = Path(vid2).stem
-    final_video_1.write_videofile(os.path.join(root_dir, "Static", "Videos", f"{path1}.mp4"))
-    final_video_2.write_videofile(os.path.join(root_dir, "Static", "Videos", f"{path2}.mp4"))
+    final_video_1.write_videofile(os.path.join(root_dir, "Static", "videos", f"{path1}.mp4"))
+    final_video_2.write_videofile(os.path.join(root_dir, "Static", "videos", f"{path2}.mp4"))
     return path1 + ".mp4", path2 + ".mp4"
 
 

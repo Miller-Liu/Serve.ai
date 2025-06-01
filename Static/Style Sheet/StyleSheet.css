@@ -26,7 +26,10 @@
 
 #WelcomePage {
     z-index: 0;
-    font-family: cursive;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -176,7 +179,10 @@
 
 #MainPage {
     z-index: 0;
-    font-family: cursive;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -276,7 +282,10 @@
 #InputButton1 {
     margin-top: 15px;
     background-color: rgb(0,0,0,0);
-    font-family: cursive;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
     border-style: solid;
     border-radius: 20px;
     width: max-content;
@@ -325,7 +334,10 @@
 #InputButton2 {
     margin-top: 15px;
     background-color: rgb(0,0,0,0);
-    font-family: cursive;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
     border-style: solid;
     border-radius: 20px;
     width: max-content;
