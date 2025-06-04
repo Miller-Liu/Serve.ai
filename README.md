@@ -27,18 +27,28 @@ git clone <repository-url> <your-repo-name>
 cd <your-repo-name>
 ```
 ### 2. Set up the virtual environment 
+First, set the local Python version to 3.9.13.
 ```bash
-pyenv 3.9.13 # Sets the local version of python to 3.9.13
-python3 -m venv .venv # creates the virtual environment
-source .venv/bin/activate # activates the virtual environment
-pip install -r requirements.txt # installs the necessary packages
+pyenv local 3.9.13
 ```
-Make sure that the version of python in the virtual environment is version 3.9.13.
-
-### 3. Run the App
+To double check that the local version is 3.9.13, run
 ```bash
-python3 main.py # or simply run the file in your code editor
+pyenv local # should be 3.9.13
 ```
+Create the virtual environment
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+Install dependencies
+```bash
+pip install -r requirements.txt
+```
+### 3. Run `main.py`
+```bash
+python main.py
+```
+Alternatively, simply run `main.py` in an editor of your choice.
 
 ## How it works
 After the app starts running, you will be prompted to input two videos of tennis serves. After you input the two videos, the program will use various AI methods to identify similar moments between the two videos, then edit the videos accordingly to synchronize them. The initial videos you inputted are stored in `Static/uploads`, the synchronized videos are are stored in `Static/videos`, and the AI-labeled similar moments between the two videos are stored in `Static/Images`.
