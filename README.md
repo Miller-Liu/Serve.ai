@@ -44,7 +44,7 @@ Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
-### 3. Run `main.py`
+### 3. Run the App
 ```bash
 python main.py
 ```
